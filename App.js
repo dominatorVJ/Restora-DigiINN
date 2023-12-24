@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Header from "./components/Header/Header.js"
 
 /**
- * Wireframe/Design Mock
+ * Wireframe/Design Mock:
  * -Header
  *   -Logo
  *   -Nav Items
@@ -20,7 +21,13 @@ import ReactDOM from "react-dom/client";
  *   -Contacts
  */
 
-const AppLayout = () => {};
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render();
+root.render(<AppLayout />);

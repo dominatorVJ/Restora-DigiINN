@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black ;
+}
+
+.logo {
+  width: 95px;
+  height: 95px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.nav-items > ul {
+    font-size: 19px;
+  display: flex;
+  margin-top: 30px;
+  list-style: none;
+}
+.nav-items > ul > li {
+  padding: 10px;
+  margin: 10px;
+}
