@@ -1,6 +1,6 @@
 import RestaurantCard from "./RestaurantCard/RestaurantCard.js";
 import SearchBar from "./SearchBar/SearchBar.js";
-import resList from "./RestaurantCard/RestaurantData.js";
+import resList from "/src/utils/RestaurantData.js";
 import "./Body.css";
 const Body = () => {
   return (
