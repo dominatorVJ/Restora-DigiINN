@@ -1,15 +1,15 @@
 .search-bar {
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
+  
 }
 .search {
+  text-align: center;
   padding: 10px;
   font-size: 16px;
   width: 400px;
 }
 .button {
+  text-align: center;
   font-size: 16px;
   margin: 5px;
   padding: 10px;

@@ -1,0 +1,13 @@
+.filter {
+  text-align: center;
+  display: flex;
+}
+.filter-btn {
+  text-align: center;
+  font-size: 16px;
+  margin: 5px;
+}
+.filter-btn:hover{
+  border: 2px solid greenyellow;
+  cursor: pointer;
+}
