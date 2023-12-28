@@ -16,7 +16,7 @@
 }
 
 .nav-items > ul {
-    font-size: 19px;
+  font-size: 19px;
   display: flex;
   margin-top: 30px;
   list-style: none;
@@ -25,3 +25,15 @@
   padding: 10px;
   margin: 10px;
 }
+
+.login{
+  margin-top: 0px;
+  font-size: 17px;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+.login:focus{
+  background-color: yellowgreen;
+}
+
