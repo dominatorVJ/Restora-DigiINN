@@ -50,7 +50,7 @@ const Body = () => {
               const filterResList = ResList.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
-               setFilterResList(filterResList);  
+              setFilterResList(filterResList);
             }}
           >
             Search
@@ -60,13 +60,24 @@ const Body = () => {
           <button
             className="filter-btn"
             onClick={() => {
-              const fresList = ResList.filter(
+              const filterResList = ResList.filter(
                 (res) => res.info.avgRating > 4.0
               );
-              setResList(fresList);
+              setFilterResList(filterResList);
             }}
           >
             Top Rated Restaurants
+          </button>
+          <button
+            className="filter-nearby-btn"
+            onClick={() => {
+              const filterResList = ResList.filter(
+                (res) => res.info.sla.lastMileTravelString < "4.0"
+              );
+              setFilterResList(filterResList);
+            }}
+          >
+           Nearby Restaurants
           </button>
         </div>
       </div>
