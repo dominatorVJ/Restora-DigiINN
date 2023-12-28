@@ -1,5 +1,4 @@
 import RestaurantCard from "./RestaurantCard/RestaurantCard.js";
-import SearchBar from "./SearchBar/SearchBar.js";
 import { useState, useEffect } from "react";
 import { API_URL } from "../../utils/constants.js";
 import "./Filter.css";
@@ -8,6 +7,7 @@ import Shimmer from "./Shimmer.js";
 
 const Body = () => {
   const [ResList, setResList] = useState([]);
+  const [searchText, setSearchText] = useState("");
   useEffect(() => {
     fetchData();
   }, []);
@@ -30,7 +30,27 @@ const Body = () => {
   ) : (
     <div className="body">
       <div className="body-top">
-        {<SearchBar />}
+        <div className="search-bar">
+          <input
+            className="search"
+            type="text"
+            placeholder="Search Restaurants here"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+          <button
+            className="button"
+            onClick={() => {
+              const filterResList = ResList.filter((res) => res.info.name.includes(searchText)
+              );
+               setResList(filterResList);
+            }}
+          >
+            Search
+          </button>
+        </div>
         <div className="filter">
           <button
             className="filter-btn"
