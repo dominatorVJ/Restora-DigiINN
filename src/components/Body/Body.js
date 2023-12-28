@@ -13,18 +13,21 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(API_URL);
+    const data = await fetch(API_URL, {
+      headers: {
+        "x-cors-api-key": "temp_c9686ddca7b5c844e30ecf1906bd7007",
+      },
+    });
     const json = await data.json();
     //Optional Chaining
     setResList(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
-  if (ResList.length === 0) {
-    return <Shimmer />;
-  }
-  return (
+  return ResList.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="body-top">
         {<SearchBar />}
