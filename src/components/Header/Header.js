@@ -1,6 +1,7 @@
 import logo from "/src/assets/logo.png";
 import "./Header.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 function refreshPage() {
   window.location.reload(false);
 }
@@ -13,9 +14,15 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact Us</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact Us</Link>
+          </li>
           <li>Cart</li>
           <li>
             <button
